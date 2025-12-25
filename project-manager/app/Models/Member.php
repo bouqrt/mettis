@@ -1,5 +1,4 @@
 <?php
-
 class Member
 {
     private string $name;
