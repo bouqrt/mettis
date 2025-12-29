@@ -1,17 +1,25 @@
 <?php
 abstract class Projet
 {
-    protected string $titre;
+    protected $id;
+    protected $titre;
+    protected $membreId;
 
-    public function __construct(string $titre)
+    public function __construct($titre, $membreId)
     {
         $this->titre = $titre;
+        $this->membreId = $membreId;
     }
 
-    public function getTitre(): string
+    public function getTitre()
     {
         return $this->titre;
     }
 
-    abstract public function getType(): string;
+    public function getMembreId()
+    {
+        return $this->membreId;
+    }
+
+    abstract public function getType();
 }

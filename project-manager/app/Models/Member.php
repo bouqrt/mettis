@@ -1,21 +1,21 @@
 <?php
 class Member
 {
-    private string $name;
-    private string $email;
+    private $name;
+    private $email;
 
-    public function __construct(string $name, string $email)
+    public function __construct($name, $email)
     {
         $this->setName($name);
         $this->setEmail($email);
     }
 
-    public function getName(): string
+    public function getName(): 
     {
         return $this->name;
     }
 
-    public function setName(string $name): void
+    public function setName($name): void
     {
         if (empty($name)) {
             throw new Exception("Invalid name");
@@ -23,12 +23,12 @@ class Member
         $this->name = $name;
     }
 
-    public function getEmail(): string
+    public function getEmail():
     {
         return $this->email;
     }
 
-    public function setEmail(string $email): void
+    public function setEmail($email): void
     {
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             throw new Exception("Invalid email");

@@ -19,5 +19,15 @@ create table project (
     -> foreign key (idmember) references member(id) on delete cascade
     -> );
 
+create table activity (
+    -> id int auto_increment primary key,
+    -> description text,
+    -> activitydate datetime,
+    -> idproject int not null,
+    -> foreign key (idproject) references project(id) on delete cascade
+    -> );
+
+show tables;
+
 
 

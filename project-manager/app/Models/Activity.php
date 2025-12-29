@@ -2,21 +2,21 @@
 
 class Activite
 {
-    private string $description;
-    private string $date;
+    private $description;
+    private $date;
 
-    public function __construct(string $description)
+    public function __construct($description)
     {
         $this->description = $description;
         $this->date = date('Y-m-d');
     }
 
-    public function getDescription(): string
+    public function getDescription():
     {
         return $this->description;
     }
 
-    public function getDate(): string
+    public function getDate():
     {
         return $this->date;
     }
