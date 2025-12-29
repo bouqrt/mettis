@@ -1,23 +1,18 @@
 <?php
-
 class Activite
 {
+    private $id;
     private $description;
-    private $date;
+    private $projetId;
 
-    public function __construct($description)
+    public function __construct($description, $projetId)
     {
         $this->description = $description;
-        $this->date = date('Y-m-d');
+        $this->projetId = $projetId;
     }
 
-    public function getDescription():
+    public function getDescription()
     {
         return $this->description;
-    }
-
-    public function getDate():
-    {
-        return $this->date;
     }
 }
